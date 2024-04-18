@@ -12,16 +12,25 @@
         const moveSet = ["rock", "paper", "scissors"];
 
         function computerSelection() {
+            /*
+            This function randomly picks between "Rock," "Paper," and "Scissors."
+            */
             selection = Math.floor(Math.random() * 3);
             return moveSet[selection];
         }
         
         function playerSelection() {
+            /*
+            This function prompts the user to pick between "Rock," "Paper," and "Scissors," then it makes the response lower-case.
+            */
             selection = prompt("What will you pick? Rock, paper, or scissors?");
             return selection.toLowerCase();
         }
 
         function playRound(playerSelection, computerSelection) {
+            /*
+            This function calls the previous two functions, then compares the output of the two. Then, it either states that the match was a tie, the player won, or the player lost.
+            */
             playerSelection = playerSelection();
             computerSelection = computerSelection();
 
@@ -35,12 +44,16 @@
         }
 
         function playGame() {
+            /*
+            This function calls the "playRound()" function five times, so the player can play this game five times.
+            */
             console.log(playRound(playerSelection, computerSelection))
             console.log(playRound(playerSelection, computerSelection))
             console.log(playRound(playerSelection, computerSelection))
             console.log(playRound(playerSelection, computerSelection))
             console.log(playRound(playerSelection, computerSelection))
         }
+        // If you're reading this, you're a massive nerd, lol, but hey, so am I =3
     </script>
 </body>
 </html>
