@@ -1,0 +1,35 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    display: flex;
+    background-color: #ceff00;
+    justify-content: center;
+}
+.textbox {
+    background-color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    max-width: 30rem;
+    
+    border-style: solid;
+
+    border-width: 0.5rem;
+    border-radius: 0.3rem;
+}
+img {
+    height: auto;
+    width: 20rem;
+
+    border-style: solid;
+    border-radius: 0.3rem;
+    border-width: 0.3rem;
+}
+button {
+    background-color: white;
+    padding: 0.5rem 1rem;
+
+    border-style: solid;
+    border-radius: 0.3rem;
+    border-width: 0.25rem;
+}

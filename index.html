@@ -3,57 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gameCode.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
     <title>
         Rock, Paper, Scissors!
     </title>
 </head>
 <body>
-    <script>
-        const moveSet = ["rock", "paper", "scissors"];
+    <div class="textbox">
+        <img src="styles/rockPaperScissors.webp" alt="This is a simple drawing of three small objects - a rock, a piece of paper, and scissors. They are entirely white and unshaded, and behind them is a yellow background">
+        <h1>
+            Rock, Paper, Scissors!
+        </h1>
+        <p>You will be facing off against a robot in this game, and you two will make your move. Choose wisely!
+        </p>
 
-        function computerSelection() {
-            /*
-            This function randomly picks between "Rock," "Paper," and "Scissors."
-            */
-            selection = Math.floor(Math.random() * 3);
-            return moveSet[selection];
-        }
+        <h2>Make Your Move</h2>
+        <div id="moves">
+            <button id="Rock">Rock</button>
+            <button id="Paper">Paper</button>
+            <button id="Scissors">Scissors</button>
+        </div>
+
+        <h2>Moves</h2>
+        <div id="movesText">
+
+        </div>
+
+        <hr>
+
+        <h2>
+            Results
+        </h2>
+        <h3>Round</h3>
+        <div id="roundsCounter">
+
+        </div>
+        <h3>Outcome</h3>
+        <div id="outcomeText">
+    
+        </div>
         
-        function playerSelection() {
-            /*
-            This function prompts the user to pick between "Rock," "Paper," and "Scissors," then it makes the response lower-case.
-            */
-            selection = prompt("What will you pick? Rock, paper, or scissors?");
-            return selection.toLowerCase();
-        }
+        <hr>
 
-        function playRound(playerSelection, computerSelection) {
-            /*
-            This function calls the previous two functions, then compares the output of the two. Then, it either states that the match was a tie, the player won, or the player lost.
-            */
-            playerSelection = playerSelection();
-            computerSelection = computerSelection();
+        <h2>
+            Scores
+        </h2>
+        <h3>Player</h3>
+        <div id="playerScoreCounter">
 
-            if (playerSelection == computerSelection) {
-                return `It's a tie! Both of you picked ${computerSelection}.`
-            } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors"|| playerSelection == "scissors" && computerSelection == "paper") {
-                return `You win! ${playerSelection} beats ${computerSelection}.`
-            } else {
-                return `You lose! ${computerSelection} beats ${playerSelection}.`
-            }
-        }
+        </div>
+        <h3>Computer</h3>
+        <div id="computerScoreCounter">
 
-        function playGame() {
-            /*
-            This function calls the "playRound()" function five times, so the player can play this game five times.
-            */
-            console.log(playRound(playerSelection, computerSelection))
-            console.log(playRound(playerSelection, computerSelection))
-            console.log(playRound(playerSelection, computerSelection))
-            console.log(playRound(playerSelection, computerSelection))
-            console.log(playRound(playerSelection, computerSelection))
-        }
-        // If you're reading this, you're a massive nerd, lol, but hey, so am I =3
-    </script>
+        </div>
+    </div>
 </body>
 </html>
